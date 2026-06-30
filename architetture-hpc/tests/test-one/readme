@@ -1,0 +1,26 @@
+# Try to compile the test code:
+
+gcc cache-test.c -o test
+
+# Tr to activate some compiler optimizations:
+
+gcc -O3 cache-test.c -o test
+
+gcc -O3 -mavx2 -fverbose-asm cache-test.c -o test
+
+gcc -O3 -mavx2 -mfma -fverbose-asm cache-test.c -o test
+
+# Have a look about what the compiler is doing with different flags:
+
+gcc -fverbose-asm -S cache-test.c -o test.s
+
+
+# When running, try to "bind" the code to hardware resources:
+
+hwloc-bind package:0.pu:0 --membind numa:0 ./test
+
+hwloc-bind package:0 --membind numa:0 ./test
+
+hwloc-bind package:0 --membind numa:1 ./test
+
+

@@ -1,0 +1,9 @@
+Rosso 1 4
+Blu 2 8
+Bianco 6 2
+Verde 2 3
+Rosso 1 8
+Verde 10 20
+Blu 8 12
+Bianco 16 48
+Rosso 2 50

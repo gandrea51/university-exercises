@@ -1,0 +1,33 @@
+/*
+S -> pX 
+X -> aSb | c
+
+Una frase: papcb
+*/
+char c;
+
+bool S() {
+    if (c=='p') return X(); 
+    else return false;
+}
+
+bool X(){
+    if (c == 'a') 
+        if (S()) 
+            if (c=='b') 
+                return true;
+            else false;
+        return false;
+    if (c == 'c')
+        return true;
+    return false;
+}
+
+// Esecuzione: S() -> X() -> S() -> X() -> true -> true -> true -> true
+
+// Esempio 2
+S -> Xp
+X -> Sq | a
+
+
+
